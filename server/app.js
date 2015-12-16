@@ -15,8 +15,8 @@ var express = require("express"),
 
 
 
-  app.get('/', function(req,res){
-    res.send("Check Server");
+  app.get('*', function(req,res){
+    res.sendFile(path.join(__dirname,"../client", "index.html"));
   });
 
   app.listen(3000, function(){console.log("got it up on 3000");});
